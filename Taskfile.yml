@@ -1,0 +1,31 @@
+---
+# https://taskfile.dev
+
+version: '3'
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+silent: true
+
+tasks:
+  build:
+    desc: Build the binary
+    dir: '{{.ROOT_DIR}}/src/cntm'
+    cmds:
+      - go build -o ../../
+    generates:
+      - cntm
+
+  generate:
+    desc: Generate the all-in-one markdown file
+    deps: [build]
+    cmds:
+      - ./cntm
+
+  clean:
+    desc: Clean up the repo
+    cmds:
+      - "rm -f cntm knowledge*.md"

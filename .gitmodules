@@ -1,0 +1,9 @@
+[submodule "OWASP-CheatSheetSeries"]
+	path = OWASP-CheatSheetSeries
+	url = https://github.com/OWASP/CheatSheetSeries/
+[submodule "tag-security"]
+	path = tag-security
+	url = https://github.com/cncf/tag-security
+[submodule "sig-security"]
+	path = sig-security
+	url = https://github.com/kubernetes/sig-security
