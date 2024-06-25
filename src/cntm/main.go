@@ -36,6 +36,7 @@ func main() {
 		"./tag-security/security-whitepaper/v2/cloud-native-security-whitepaper.md",
 		"./sig-security/sig-security-docs/papers/policy_grc/kubernetes-grc.md",
 		"./sig-security/sig-security-docs/papers/policy/kubernetes-policy-management.md",
+		"./tag-runtime/wgs/cnai/whitepapers/cloudnativeai.md",
 	}
 
 	// Create a single list of all files

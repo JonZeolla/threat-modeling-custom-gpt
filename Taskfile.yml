@@ -11,6 +11,16 @@ set:
 silent: true
 
 tasks:
+  init:
+    desc: Init the repo
+    cmds:
+      - git submodule update --init --recursive
+
+  update:
+    desc: Update the repo
+    cmds:
+      - git submodule update --remote --merge
+
   build:
     desc: Build the binary
     dir: '{{.ROOT_DIR}}/src/cntm'

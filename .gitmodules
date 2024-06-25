@@ -7,3 +7,6 @@
 [submodule "sig-security"]
 	path = sig-security
 	url = https://github.com/kubernetes/sig-security
+[submodule "tag-runtime"]
+	path = tag-runtime
+	url = https://github.com/cncf/tag-runtime
