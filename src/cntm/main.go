@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 )
@@ -42,7 +41,7 @@ func main() {
 	// Create a single list of all files
 	files := append(cheatSheets, whitePapers...)
 
-	// Concatonate files into as few files as possible, creating a new file only once it exceeds 1.5MB
+	// Concatenate files into as few files as possible, creating a new file only once it exceeds 1.5MB
 	for _, file := range files {
 		// Add a per-file header for sanity
 		_, err := outputFile.WriteString(fmt.Sprintf("START OF %s\n\n", filepath.Base(file)))
@@ -74,7 +73,7 @@ func main() {
 			defer outputFile.Close()
 		}
 
-		fileContents, err := ioutil.ReadFile(file)
+		fileContents, err := os.ReadFile(file)
 		if err != nil {
 			fmt.Printf("Error reading file %s: %v\n", file, err)
 			return
